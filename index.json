@@ -1,6 +1,6 @@
 {
   "_schema": "catalog-index-v2",
-  "generated_at": "2026-07-31T17:58:47.632662+00:00",
+  "generated_at": "2026-07-31T18:03:03.291926+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
@@ -46,6 +46,12 @@
               "thumb": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-1001/thumb.jpg",
               "fabric_path": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-1001/fabric.jpg",
               "calib_path": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-1001/calib.json"
+            },
+            {
+              "article": "ART-2011",
+              "thumb": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-2011/thumb.jpg",
+              "fabric_path": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-2011/fabric.jpg",
+              "calib_path": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-2011/calib.json"
             }
           ]
         }

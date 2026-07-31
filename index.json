@@ -1,85 +1,44 @@
 {
   "_schema": "catalog-index-v1",
-  "generated_at": "2026-07-31T13:09:26+00:00",
+  "generated_at": "2026-07-31T13:29:07+00:00",
   "base_url": "https://artvyat.github.io/catalog-repo/suppliers",
   "suppliers": [
     {
       "id": "postavshik-1",
-      "name": "Поставщик 1",
+      "name": "Decartina",
       "avatar": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/avatar.jpg",
       "catalogs": [
         {
-          "id": "catalog-classic",
-          "name": "Классик ✅",
-          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-classic/cover.jpg",
+          "id": "catalog-individual",
+          "name": "Individual",
+          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-individual/cover.jpg",
           "fabrics": [
             {
               "article": "ART-1001",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-classic/ART-1001/thumb.jpg",
-              "key": "postavshik-1__catalog-classic__ART-1001"
+              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-individual/ART-1001/thumb.jpg",
+              "key": "postavshik-1__catalog-individual__ART-1001"
             },
             {
               "article": "ART-1002",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-classic/ART-1002/thumb.jpg",
-              "key": "postavshik-1__catalog-classic__ART-1002"
+              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-individual/ART-1002/thumb.jpg",
+              "key": "postavshik-1__catalog-individual__ART-1002"
             }
           ]
         },
         {
-          "id": "catalog-lux",
-          "name": "Люкс",
-          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-lux/cover.jpg",
+          "id": "catalog-mono",
+          "name": "Mono",
+          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-mono/cover.jpg",
           "fabrics": [
             {
               "article": "ART-1001",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-lux/ART-1001/thumb.jpg",
-              "key": "postavshik-1__catalog-lux__ART-1001"
+              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-mono/ART-1001/thumb.jpg",
+              "key": "postavshik-1__catalog-mono__ART-1001"
             },
             {
               "article": "ART-1002",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-lux/ART-1002/thumb.jpg",
-              "key": "postavshik-1__catalog-lux__ART-1002"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "postavshik-2",
-      "name": "Поставщик 2",
-      "avatar": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/avatar.jpg",
-      "catalogs": [
-        {
-          "id": "catalog-classic",
-          "name": "Классик",
-          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/catalog-classic/cover.jpg",
-          "fabrics": [
-            {
-              "article": "ART-1001",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/catalog-classic/ART-1001/thumb.jpg",
-              "key": "postavshik-2__catalog-classic__ART-1001"
-            },
-            {
-              "article": "ART-1002",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/catalog-classic/ART-1002/thumb.jpg",
-              "key": "postavshik-2__catalog-classic__ART-1002"
-            }
-          ]
-        },
-        {
-          "id": "catalog-lux",
-          "name": "Люкс",
-          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/catalog-lux/cover.jpg",
-          "fabrics": [
-            {
-              "article": "ART-1001",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/catalog-lux/ART-1001/thumb.jpg",
-              "key": "postavshik-2__catalog-lux__ART-1001"
-            },
-            {
-              "article": "ART-1002",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-2/catalog-lux/ART-1002/thumb.jpg",
-              "key": "postavshik-2__catalog-lux__ART-1002"
+              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-mono/ART-1002/thumb.jpg",
+              "key": "postavshik-1__catalog-mono__ART-1002"
             }
           ]
         }

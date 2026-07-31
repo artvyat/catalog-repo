@@ -44,9 +44,6 @@ function esc(s) {
 // ═══════════════════════════════════════════
 //  ХЕЛПЕР: карточка (аватар/обложка + имя + клик)
 // ═══════════════════════════════════════════
-function fabKey(sp, ct, ar) { return sp + "::" + ct + "::" + ar; }
-
-
 function card(img, name, onClick) {
   const el = document.createElement("div");
   el.className = "card";
@@ -66,7 +63,7 @@ function card(img, name, onClick) {
     const res = await fetch(INDEX_URL, { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
     INDEX = await res.json();
-    if (INDEX._schema !== "catalog-index-v2") {
+    if (INDEX._schema !== "catalog-index-v1") {
       $screen.innerHTML = `<div class="msg">Каталог устарел, обнови приложение.</div>`;
       return;
     }
@@ -124,15 +121,14 @@ function renderFabrics(cat) {
   $bottom.classList.remove("hidden");
 
   for (const fab of cat.fabrics) {
-    const key = fabKey(curSupplier.id, curCatalog.id, fab.article);
     const el = document.createElement("div");
-    el.className = "fabric" + (selected.has(key) ? " selected" : "");
+    el.className = "fabric" + (selected.has(fab.key) ? " selected" : "");
     el.innerHTML = `
       <div class="check">✓</div>
       <img src="${esc(fab.thumb)}" alt="${esc(fab.article)}" loading="lazy"
            onerror="this.style.opacity=0.3">
       <div class="art">${esc(fab.article)}</div>`;
-    el.addEventListener("click", () => toggle(fab, key, el));
+    el.addEventListener("click", () => toggle(fab, el));
     $screen.appendChild(el);
   }
   updateCounter();
@@ -141,9 +137,9 @@ function renderFabrics(cat) {
 // ═══════════════════════════════════════════
 //  ВЫБОР
 // ═══════════════════════════════════════════
-function toggle(fab, key, el) {
-  if (selected.has(key)) {
-    selected.delete(key);
+function toggle(fab, el) {
+  if (selected.has(fab.key)) {
+    selected.delete(fab.key);
     el.classList.remove("selected");
   } else {
     if (selected.size >= LIMIT) {
@@ -151,7 +147,7 @@ function toggle(fab, key, el) {
       flashLimit();
       return;
     }
-    selected.set(key, {
+    selected.set(fab.key, {
       supplier: curSupplier.id,
       catalog:  curCatalog.id,
       article:  fab.article,

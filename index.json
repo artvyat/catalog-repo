@@ -1,44 +1,51 @@
 {
-  "_schema": "catalog-index-v1",
-  "generated_at": "2026-07-31T17:35:34+00:00",
-  "base_url": "https://artvyat.github.io/catalog-repo/suppliers",
+  "_schema": "catalog-index-v2",
+  "generated_at": "2026-07-31T18:02:02.866262+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
       "name": "Decartina",
-      "avatar": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/avatar.jpg",
+      "avatar": "suppliers/postavshik-1/avatar.jpg",
       "catalogs": [
         {
-          "id": "catalog-individual",
+          "id": "catalog-01",
           "name": "Individual",
-          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-individual/cover.jpg",
+          "cover": "suppliers/postavshik-1/collection-individual/catalog-01/cover.jpg",
+          "collection": {
+            "id": "collection-individual",
+            "name": "collection-individual",
+            "cover": null
+          },
           "fabrics": [
             {
               "article": "ART-1001",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-individual/ART-1001/thumb.jpg",
-              "key": "postavshik-1__catalog-individual__ART-1001"
+              "thumb": "suppliers/postavshik-1/collection-individual/catalog-01/ART-1001/thumb.jpg",
+              "fabric_path": "suppliers/postavshik-1/collection-individual/catalog-01/ART-1001/fabric.jpg",
+              "calib_path": null
             },
             {
               "article": "ART-1002",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-individual/ART-1002/thumb.jpg",
-              "key": "postavshik-1__catalog-individual__ART-1002"
+              "thumb": "suppliers/postavshik-1/collection-individual/catalog-01/ART-1002/thumb.jpg",
+              "fabric_path": "suppliers/postavshik-1/collection-individual/catalog-01/ART-1002/fabric.jpg",
+              "calib_path": null
             }
           ]
         },
         {
-          "id": "catalog-mono",
+          "id": "catalog-2011",
           "name": "Mono",
-          "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-mono/cover.jpg",
+          "cover": "suppliers/postavshik-1/collection-mono/catalog-2011/cover.jpg",
+          "collection": {
+            "id": "collection-mono",
+            "name": "collection-mono",
+            "cover": null
+          },
           "fabrics": [
             {
-              "article": "2011:1",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-mono/2011:1/thumb.jpg",
-              "key": "postavshik-1__catalog-mono__2011:1"
-            },
-            {
               "article": "ART-1001",
-              "thumb": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-mono/ART-1001/thumb.jpg",
-              "key": "postavshik-1__catalog-mono__ART-1001"
+              "thumb": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-1001/thumb.jpg",
+              "fabric_path": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-1001/fabric.jpg",
+              "calib_path": "suppliers/postavshik-1/collection-mono/catalog-2011/ART-1001/calib.json"
             }
           ]
         }

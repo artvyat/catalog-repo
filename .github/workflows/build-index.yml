@@ -1,0 +1,42 @@
+name: build-index
+
+on:
+  push:
+    paths:
+      - "suppliers/**"
+      - "build_index.py"
+      - ".github/workflows/build-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build index.json
+        env:
+          # <user>.github.io/<repo>  → определяется автоматически из GITHUB_REPOSITORY
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python build_index.py
+
+      - name: Commit index.json if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- index.json; then
+            git add index.json
+            git commit -m "chore: rebuild index.json [skip ci]"
+            git push
+          else
+            echo "index.json не изменился — коммит не нужен."
+          fi

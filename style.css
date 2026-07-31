@@ -1,0 +1,101 @@
+:root {
+  --bg:    var(--tg-theme-bg-color, #ffffff);
+  --text:  var(--tg-theme-text-color, #000000);
+  --hint:  var(--tg-theme-hint-color, #888888);
+  --btn:   var(--tg-theme-button-color, #2ea6ff);
+  --btn-t: var(--tg-theme-button-text-color, #ffffff);
+  --card:  var(--tg-theme-secondary-bg-color, #f4f4f5);
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-bottom: 72px;
+}
+
+#topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--card);
+}
+#topbar h1 { font-size: 18px; margin: 0; }
+#back {
+  background: none; border: none; color: var(--btn);
+  font-size: 16px; cursor: pointer; padding: 4px 8px;
+}
+.hidden { display: none !important; }
+
+#screen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 16px;
+}
+
+/* карточки поставщиков/каталогов — крупные */
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform .08s;
+}
+.card:active { transform: scale(0.97); }
+.card img {
+  width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+  background: #ddd;
+}
+.card .label {
+  padding: 8px 10px; font-size: 14px; font-weight: 500;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* плитки тканей — компактнее, 3 в ряд */
+#screen.fabrics { grid-template-columns: repeat(3, 1fr); }
+.fabric {
+  position: relative;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+.fabric img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+.fabric .art {
+  font-size: 11px; padding: 4px 6px; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.fabric.selected { border-color: var(--btn); }
+.fabric .check {
+  position: absolute; top: 6px; right: 6px;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--btn); color: var(--btn-t);
+  display: none; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: bold;
+}
+.fabric.selected .check { display: flex; }
+
+#bottombar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 12px 16px;
+  background: var(--bg);
+  border-top: 1px solid var(--card);
+}
+#counter { font-size: 14px; color: var(--hint); }
+#confirm {
+  background: var(--btn); color: var(--btn-t);
+  border: none; border-radius: 10px;
+  padding: 12px 24px; font-size: 15px; font-weight: 600;
+  cursor: pointer;
+}
+#confirm:disabled { opacity: .4; cursor: default; }
+
+.msg { grid-column: 1/-1; text-align: center; color: var(--hint); padding: 40px 0; }

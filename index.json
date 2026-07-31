@@ -1,6 +1,6 @@
 {
   "_schema": "catalog-index-v1",
-  "generated_at": "2026-07-31T09:59:37+00:00",
+  "generated_at": "2026-07-31T10:08:23+00:00",
   "base_url": "https://artvyat.github.io/catalog-repo/suppliers",
   "suppliers": [
     {
@@ -10,7 +10,7 @@
       "catalogs": [
         {
           "id": "catalog-classic",
-          "name": "Классик",
+          "name": "Классик ✅",
           "cover": "https://artvyat.github.io/catalog-repo/suppliers/postavshik-1/catalog-classic/cover.jpg",
           "fabrics": [
             {

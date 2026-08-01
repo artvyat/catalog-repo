@@ -1,7 +1,7 @@
 {
   "_schema": "catalog-index-v2",
   "base_url": "",
-  "generated_at": "2026-08-01T09:15:30.560206+00:00",
+  "generated_at": "2026-08-01T09:36:14.062888+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
@@ -27,6 +27,11 @@
                   "article": "2011-2",
                   "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-2/thumb.jpg",
                   "key": "postavshik-1__catalog-2011__2011-2"
+                },
+                {
+                  "article": "2011-3",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-3/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-3"
                 }
               ]
             }

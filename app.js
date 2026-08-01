@@ -1,7 +1,11 @@
 // ═══════════════════════════════════════════
 //  M2 — CATALOG (Mini App)
-//  ВХОД:  index.json
+//  ВХОД:  index.json (catalog-index-v2)
 //  ВЫХОД: sendData → order.json {job_id, user_id, fabrics:[{supplier,catalog,article}]}
+//
+//  Навигация: поставщик → коллекция → каталог → ткани.
+//  Коллекция — ТОЛЬКО навигация. В fabric_key / order.json НЕ входит.
+//  Коллекция id="_default" (name=null, cover=null) → экран коллекции ПРОПУСКАЕТСЯ.
 // ═══════════════════════════════════════════
 
 const LIMIT = 10;
@@ -17,8 +21,9 @@ const USER_ID = tg?.initDataUnsafe?.user?.id ?? 0;
 
 // ── состояние ──
 let INDEX = null;
-let curSupplier = null;
-let curCatalog  = null;
+let curSupplier   = null;
+let curCollection = null;   // новый уровень (только навигация)
+let curCatalog    = null;
 const selected = new Map();
 
 // ── элементы ──
@@ -63,7 +68,7 @@ function card(img, name, onClick) {
     const res = await fetch(INDEX_URL, { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
     INDEX = await res.json();
-    if (INDEX._schema !== "catalog-index-v1") {
+    if (INDEX._schema !== "catalog-index-v2") {
       $screen.innerHTML = `<div class="msg">Каталог устарел, обнови приложение.</div>`;
       return;
     }
@@ -77,7 +82,7 @@ function card(img, name, onClick) {
 //  ЭКРАН 1 — ПОСТАВЩИКИ
 // ═══════════════════════════════════════════
 function renderSuppliers() {
-  curSupplier = null; curCatalog = null;
+  curSupplier = null; curCollection = null; curCatalog = null;
   $title.textContent = "Поставщики";
   $back.classList.add("hidden");
   $bottom.classList.add("hidden");
@@ -89,28 +94,66 @@ function renderSuppliers() {
     return;
   }
   for (const sup of INDEX.suppliers) {
-    $screen.appendChild(card(sup.avatar, sup.name, () => renderCatalogs(sup)));
+    $screen.appendChild(card(sup.avatar, sup.name, () => enterSupplier(sup)));
   }
 }
 
 // ═══════════════════════════════════════════
-//  ЭКРАН 2 — КАТАЛОГИ
+//  РАЗВИЛКА: коллекции ИЛИ сразу каталоги (пропуск _default)
 // ═══════════════════════════════════════════
-function renderCatalogs(sup) {
-  curSupplier = sup; curCatalog = null;
+function isDefaultOnly(sup) {
+  const cols = sup.collections || [];
+  return cols.length === 1 && cols[0].id === "_default";
+}
+
+function enterSupplier(sup) {
+  curSupplier = sup; curCollection = null; curCatalog = null;
+  if (isDefaultOnly(sup)) {
+    // единственная синтетическая коллекция → экран коллекции ПРОПУСКАЕМ
+    renderCatalogs(sup.collections[0]);
+  } else {
+    renderCollections(sup);
+  }
+}
+
+// ═══════════════════════════════════════════
+//  ЭКРАН 2 — КОЛЛЕКЦИИ (только навигация)
+// ═══════════════════════════════════════════
+function renderCollections(sup) {
+  curSupplier = sup; curCollection = null; curCatalog = null;
   $title.textContent = sup.name;
   $back.classList.remove("hidden");
   $bottom.classList.add("hidden");
   $screen.className = "";
   $screen.innerHTML = "";
 
-  for (const cat of sup.catalogs) {
+  for (const col of sup.collections) {
+    // _default сюда не попадёт (развилка выше), но подстрахуемся именем/обложкой
+    const name  = col.name  ?? "Коллекция";
+    const cover = col.cover ?? "";
+    $screen.appendChild(card(cover, name, () => renderCatalogs(col)));
+  }
+}
+
+// ═══════════════════════════════════════════
+//  ЭКРАН 3 — КАТАЛОГИ
+// ═══════════════════════════════════════════
+function renderCatalogs(col) {
+  curCollection = col; curCatalog = null;
+  // заголовок: имя коллекции, а для _default — имя поставщика (старое поведение)
+  $title.textContent = (col.id === "_default") ? curSupplier.name : (col.name ?? curSupplier.name);
+  $back.classList.remove("hidden");
+  $bottom.classList.add("hidden");
+  $screen.className = "";
+  $screen.innerHTML = "";
+
+  for (const cat of col.catalogs) {
     $screen.appendChild(card(cat.cover, cat.name, () => renderFabrics(cat)));
   }
 }
 
 // ═══════════════════════════════════════════
-//  ЭКРАН 3 — ТКАНИ (мультивыбор)
+//  ЭКРАН 4 — ТКАНИ (мультивыбор)
 // ═══════════════════════════════════════════
 function renderFabrics(cat) {
   curCatalog = cat;
@@ -148,7 +191,7 @@ function toggle(fab, el) {
       return;
     }
     selected.set(fab.key, {
-      supplier: curSupplier.id,
+      supplier: curSupplier.id,   // коллекция в ключ/заказ НЕ входит
       catalog:  curCatalog.id,
       article:  fab.article,
     });
@@ -170,11 +213,24 @@ function flashLimit() {
 }
 
 // ═══════════════════════════════════════════
-//  НАВИГАЦИЯ НАЗАД
+//  НАВИГАЦИЯ НАЗАД (симметрична пропуску _default)
 // ═══════════════════════════════════════════
 function goBack() {
-  if (curCatalog)       { renderCatalogs(curSupplier); }
-  else if (curSupplier) { renderSuppliers(); }
+  if (curCatalog) {
+    // с тканей → к каталогам текущей коллекции
+    renderCatalogs(curCollection);
+  } else if (curCollection) {
+    // с каталогов → к коллекциям;
+    // но если коллекция была _default (пропущена) → сразу к поставщикам
+    if (curCollection.id === "_default") {
+      renderSuppliers();
+    } else {
+      renderCollections(curSupplier);
+    }
+  } else if (curSupplier) {
+    // с экрана коллекций → к поставщикам
+    renderSuppliers();
+  }
 }
 
 // ═══════════════════════════════════════════

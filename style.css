@@ -99,3 +99,13 @@ body {
 #confirm:disabled { opacity: .4; cursor: default; }
 
 .msg { grid-column: 1/-1; text-align: center; color: var(--hint); padding: 40px 0; }
+
+/* имя внутри карточки (поставщик / коллекция / каталог) */
+.card .card-name {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

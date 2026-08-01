@@ -1,4 +1,5 @@
 {
+  "fabric_cm": 50,
   "brightness": {
     "bias": 0.385427,
     "coefs": {

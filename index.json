@@ -1,7 +1,7 @@
 {
   "_schema": "catalog-index-v2",
   "base_url": "",
-  "generated_at": "2026-08-01T11:05:12.355334+00:00",
+  "generated_at": "2026-08-01T14:38:48.369129+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
@@ -32,6 +32,18 @@
                   "article": "2011-3",
                   "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-3/thumb.jpg",
                   "key": "postavshik-1__catalog-2011__2011-3"
+                }
+              ]
+            },
+            {
+              "id": "catalog-246",
+              "name": "246",
+              "cover": "suppliers/postavshik-1/collection-Mono/catalog-246/cover.jpg",
+              "fabrics": [
+                {
+                  "article": "246-2",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-246/246-2/thumb.jpg",
+                  "key": "postavshik-1__catalog-246__246-2"
                 }
               ]
             }

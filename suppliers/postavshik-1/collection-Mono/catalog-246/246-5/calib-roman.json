@@ -1,5 +1,6 @@
 {
-  "brightness": {
+    "fabric_cm": 75
+    "brightness": {
     "bias": 0.34721,
     "coefs": {
       "Y_mask": -0.196317,

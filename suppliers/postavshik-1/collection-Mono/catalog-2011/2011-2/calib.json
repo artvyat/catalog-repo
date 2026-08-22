@@ -1,14 +1,19 @@
 {
-  "fabric_cm": 50,
+  "_schema": "direct-params-v2",
+  "fabric": "2",
+  "curtain_type": "classic",
+  "span_cm": 250.0,
+  "n_samples": 10,
+  "fabric_cm": 40.0,
   "brightness": {
-    "bias": 0.385427,
+    "bias": 0.295137,
     "coefs": {
-      "Y_mask": -0.340165,
-      "contrast_mask": 0.050542,
-      "temp_mask": 0.265043,
-      "Y_env": 0.537818,
-      "contrast_env": 0.370676,
-      "temp_env": 0.417054
+      "Y_mask": 0.010171,
+      "contrast_mask": 0.154989,
+      "temp_mask": 0.285785,
+      "Y_env": 0.607128,
+      "contrast_env": 0.302603,
+      "temp_env": 0.174349
     },
     "clip": [
       0.3,
@@ -16,14 +21,14 @@
     ]
   },
   "contrast": {
-    "bias": 1.005159,
+    "bias": 1.003531,
     "coefs": {
-      "Y_mask": -0.026456,
-      "contrast_mask": -0.009735,
-      "temp_mask": -0.001583,
-      "Y_env": 0.013855,
-      "contrast_env": 0.003028,
-      "temp_env": -0.018149
+      "Y_mask": -0.002557,
+      "contrast_mask": 0.005342,
+      "temp_mask": 0.02067,
+      "Y_env": 0.01432,
+      "contrast_env": 0.023841,
+      "temp_env": 0.00962
     },
     "clip": [
       0.5,
@@ -31,27 +36,33 @@
     ]
   },
   "temp": {
-    "bias": -0.0,
-    "coefs": {},
+    "bias": -0.005672,
+    "coefs": {
+      "Y_mask": -0.025331,
+      "contrast_mask": -0.02525,
+      "temp_mask": 0.044584,
+      "Y_env": -0.004869,
+      "contrast_env": 0.032758,
+      "temp_env": 0.027437
+    },
     "clip": [
       -0.3,
       0.3
     ]
   },
   "shading": {
-    "bias": 5.696256,
+    "bias": 4.277664,
     "coefs": {
-      "Y_mask": -0.452429,
-      "contrast_mask": -2.299321,
-      "temp_mask": 0.258681,
-      "Y_env": -3.280151,
-      "contrast_env": -1.61665,
-      "temp_env": -1.746753
+      "Y_mask": -1.04194,
+      "contrast_mask": -1.669244,
+      "temp_mask": 0.085467,
+      "Y_env": -2.508286,
+      "contrast_env": -3.95392,
+      "temp_env": -1.06005
     },
     "clip": [
       0.0,
       15.0
     ]
-  },
-  "_schema": "direct-params-v2"
+  }
 }

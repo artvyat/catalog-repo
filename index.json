@@ -1,7 +1,7 @@
 {
   "_schema": "catalog-index-v2",
   "base_url": "",
-  "generated_at": "2026-08-19T14:10:11.299037+00:00",
+  "generated_at": "2026-08-22T16:38:27.320865+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
@@ -15,13 +15,33 @@
           "catalogs": [
             {
               "id": "catalog-2011",
-              "name": "2011",
+              "name": "Каталог 2011",
               "cover": "suppliers/postavshik-1/collection-Mono/catalog-2011/cover.jpg",
               "fabrics": [
                 {
                   "article": "2011-1",
                   "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-1/thumb.jpg",
                   "key": "postavshik-1__catalog-2011__2011-1"
+                },
+                {
+                  "article": "2011-10",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-10/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-10"
+                },
+                {
+                  "article": "2011-11",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-11/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-11"
+                },
+                {
+                  "article": "2011-12",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-12/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-12"
+                },
+                {
+                  "article": "2011-13",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-13/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-13"
                 },
                 {
                   "article": "2011-2",
@@ -32,6 +52,36 @@
                   "article": "2011-3",
                   "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-3/thumb.jpg",
                   "key": "postavshik-1__catalog-2011__2011-3"
+                },
+                {
+                  "article": "2011-4",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-4/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-4"
+                },
+                {
+                  "article": "2011-5",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-5/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-5"
+                },
+                {
+                  "article": "2011-6",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-6/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-6"
+                },
+                {
+                  "article": "2011-7",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-7/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-7"
+                },
+                {
+                  "article": "2011-8",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-8/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-8"
+                },
+                {
+                  "article": "2011-9",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-2011/2011-9/thumb.jpg",
+                  "key": "postavshik-1__catalog-2011__2011-9"
                 }
               ]
             },

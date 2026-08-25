@@ -1,7 +1,7 @@
 {
   "_schema": "catalog-index-v2",
   "base_url": "",
-  "generated_at": "2026-08-25T13:34:52.487285+00:00",
+  "generated_at": "2026-08-25T14:00:41.162434+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
@@ -15,7 +15,7 @@
           "catalogs": [
             {
               "id": "catalog-2011",
-              "name": "Каталог 2011",
+              "name": "2011",
               "cover": "suppliers/postavshik-1/collection-Mono/catalog-2011/cover.jpg",
               "fabrics": [
                 {

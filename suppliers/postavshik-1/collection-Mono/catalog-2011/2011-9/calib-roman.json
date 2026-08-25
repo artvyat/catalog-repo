@@ -4,7 +4,6 @@
   "curtain_type": "roman",
   "span_cm": 150.0,
   "n_samples": 10,
-  "fabric_cm": 20.0,
   "brightness": {
     "bias": -0.10662,
     "coefs": {

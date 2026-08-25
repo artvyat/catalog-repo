@@ -1,10 +1,8 @@
 {
   "_schema": "direct-params-v2",
-  "fabric": "10",
   "curtain_type": "classic",
   "span_cm": 250.0,
   "n_samples": 10,
-  "fabric_cm": 160.0,
   "brightness": {
     "bias": 0.254028,
     "coefs": {

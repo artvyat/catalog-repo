@@ -4,7 +4,6 @@
   "curtain_type": "classic",
   "span_cm": 250.0,
   "n_samples": 10,
-  "fabric_cm": 20.0,
   "brightness": {
     "bias": 0.25737,
     "coefs": {

@@ -1,0 +1,60 @@
+{
+  "_schema": "direct-params-v2",
+  "fabric": "10",
+  "curtain_type": "roman",
+  "span_cm": 150.0,
+  "n_samples": 10,
+  "brightness": {
+    "bias": -0.22932,
+    "coefs": {
+      "Y_mask": 1.285757,
+      "contrast_mask": -0.339639,
+      "temp_mask": -0.467538,
+      "Y_env": 0.7741,
+      "contrast_env": 1.184018,
+      "temp_env": 0.103147
+    },
+    "clip": [
+      0.3,
+      2.0
+    ]
+  },
+  "contrast": {
+    "bias": 1.0,
+    "coefs": {},
+    "clip": [
+      0.5,
+      2.5
+    ]
+  },
+  "temp": {
+    "bias": 0.028118,
+    "coefs": {
+      "Y_mask": -0.066085,
+      "contrast_mask": 0.006143,
+      "temp_mask": 0.015022,
+      "Y_env": 0.009867,
+      "contrast_env": 0.022337,
+      "temp_env": 0.093376
+    },
+    "clip": [
+      -0.3,
+      0.3
+    ]
+  },
+  "shading": {
+    "bias": 3.096281,
+    "coefs": {
+      "Y_mask": -0.127051,
+      "contrast_mask": -0.013116,
+      "temp_mask": 0.007112,
+      "Y_env": -0.170662,
+      "contrast_env": -0.345979,
+      "temp_env": 0.217344
+    },
+    "clip": [
+      0.0,
+      15.0
+    ]
+  }
+}

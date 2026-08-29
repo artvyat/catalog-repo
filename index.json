@@ -1,7 +1,7 @@
 {
   "_schema": "catalog-index-v2",
   "base_url": "",
-  "generated_at": "2026-08-29T15:25:43.165133+00:00",
+  "generated_at": "2026-08-29T17:25:08.985228+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
@@ -112,6 +112,83 @@
                   "article": "1412-9",
                   "thumb": "suppliers/postavshik-1/collection-Mono/catalog-1412/1412-9/thumb.jpg",
                   "key": "postavshik-1__catalog-1412__1412-9"
+                }
+              ]
+            },
+            {
+              "id": "catalog-149",
+              "name": "149",
+              "cover": "suppliers/postavshik-1/collection-Mono/catalog-149/cover.jpg",
+              "fabrics": [
+                {
+                  "article": "149-1",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-1/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-1"
+                },
+                {
+                  "article": "149-10",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-10/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-10"
+                },
+                {
+                  "article": "149-11",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-11/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-11"
+                },
+                {
+                  "article": "149-12",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-12/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-12"
+                },
+                {
+                  "article": "149-13",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-13/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-13"
+                },
+                {
+                  "article": "149-14",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-14/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-14"
+                },
+                {
+                  "article": "149-2",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-2/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-2"
+                },
+                {
+                  "article": "149-3",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-3/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-3"
+                },
+                {
+                  "article": "149-4",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-4/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-4"
+                },
+                {
+                  "article": "149-5",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-5/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-5"
+                },
+                {
+                  "article": "149-6",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-6/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-6"
+                },
+                {
+                  "article": "149-7",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-7/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-7"
+                },
+                {
+                  "article": "149-8",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-8/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-8"
+                },
+                {
+                  "article": "149-9",
+                  "thumb": "suppliers/postavshik-1/collection-Mono/catalog-149/149-9/thumb.jpg",
+                  "key": "postavshik-1__catalog-149__149-9"
                 }
               ]
             },
@@ -485,7 +562,7 @@
             },
             {
               "id": "catalog-306",
-              "name": "Catalog 306",
+              "name": "306",
               "cover": "suppliers/postavshik-1/collection-Mono/catalog-306/cover.jpg",
               "fabrics": [
                 {
@@ -557,7 +634,7 @@
             },
             {
               "id": "catalog-610",
-              "name": "Catalog 610",
+              "name": "610",
               "cover": "suppliers/postavshik-1/collection-Mono/catalog-610/cover.jpg",
               "fabrics": [
                 {

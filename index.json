@@ -1,11 +1,11 @@
 {
   "_schema": "catalog-index-v2",
   "base_url": "",
-  "generated_at": "2026-09-01T04:48:06.695115+00:00",
+  "generated_at": "2026-09-01T05:01:57.645443+00:00",
   "suppliers": [
     {
       "id": "postavshik-1",
-      "name": "Decartina",
+      "name": "DECARTINA",
       "avatar": "suppliers/postavshik-1/avatar.jpg",
       "collections": [
         {
@@ -117,7 +117,7 @@
             },
             {
               "id": "catalog-149",
-              "name": "Catalog 149",
+              "name": "149",
               "cover": "suppliers/postavshik-1/collection-Mono/catalog-149/cover.jpg",
               "fabrics": [
                 {
@@ -746,7 +746,7 @@
             },
             {
               "id": "catalog-617",
-              "name": "Catalog 617",
+              "name": "617",
               "cover": "suppliers/postavshik-1/collection-Mono/catalog-617/cover.jpg",
               "fabrics": [
                 {
